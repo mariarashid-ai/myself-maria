@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="boot/CSS/bootstrap.css">
+    <link rel="stylesheet" href="boot/CSS/mdb.css">
+    <link rel="stylesheet" href="boot/CSS/style.css">
+    <link rel="stylesheet" href="abc.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        .navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+   /*  color: #ffcc00; Highlight color */
+    background-color: skyblue; /* Removes default underline */
+}
+        .carousel-inner img {
+    max-height: 400px; /* Restrict height */
+    width: 100%; /* Maintain full width for responsiveness */
+   
+    margin-top: 2px;
+}
+
+        .card-header button {
+            text-align: left;
+            width: 100%;
+        }
+        .bg-bzu-red {
+            background-color: #990000; /* BZU theme red */
+            color: white;
+        }
+/* Footer Section Styling */
+.footer {
+    background-color: #041e42;  /* Dark blue background */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Icons and Links Styling */
+.footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.footer-icons .icon-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;  /* Use Font Awesome icons size */
+}
+
+/* Right Line Styling */
+.footer-icons .right-line {
+    height: 50px;
+    width: 2px;
+    background-color: white;
+}
+
+.footer-icons i {
+    font-size: 2rem; /* Adjust icon size */
+    color: white;
+}
+
+/* Automatically adjusts layout for smaller screens with Flexbox */
+.footer-icons {
+    flex-wrap: wrap;  /* Ensures wrapping for smaller screen sizes */
+    justify-content: center; /* Center icons */
+}
+
+.footer-icons .icon-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+    /* Ensure uniform card sizes */
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%; /* Ensures all cards are the same height */
+    }
+
+    /* Set a uniform image size */
+    .project-card img {
+        object-fit: cover; /* Ensures the image fills the area without distortion */
+        height: 200px; /* Fixed height for all images */
+        width: 100%; /* Full width */
+    }
+
+    /* Add shadow and border radius for better visuals */
+    .project-card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Ensure card body content is aligned */
+    .project-card .card-body {
+        flex-grow: 1; /* Allows the card body to expand evenly */
+        text-align: center; /* Center-align text */
+    }
+
+
+
+.project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px;
+    }
+
+    .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card-link {
+        text-decoration: none; /* Removes the underline from the link */
+    }
+
+    .projects-header h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .projects-header p {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .card-img-top {
+        border-radius: 8px;
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    /* Ensure responsiveness on smaller screens */
+    @media (max-width: 768px) {
+        .card-img-top {
+            max-height: 150px;
+        }
+    }
+    .contact-form-section .container {
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    /* Adjust padding for smaller screens */
+    @media (max-width: 576px) {
+        .contact-form-section .container {
+            padding: 15px;
+        }
+    }
+
+    /* Enhance button visibility */
+    .contact-form-section button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* Add some spacing for labels */
+    .contact-form-section label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: #041e42;border-radius: 1px;">
+        <div class="container">
+            <!-- Brand/Title and Toggler in the same row -->
+            <div class="d-flex w-100 justify-content-between align-items-center">
+                <!-- Brand/Heading -->
+                <h2 class="abc text-center mb-0 text-light  fw-bold">Maria Rashid</h2>
+                <!-- Toggler Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <!-- Collapsible Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Home Link -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="index.html" active>
+                            <i class="fas fa-home mr-2"></i> Home
+                        </a>
+                    </li>
+                    <!-- About Link -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#about">
+                            <i class="fas fa-user mr-2"></i> About
+                        </a>
+                    </li>
+                    <!-- Skills Link -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#skill">
+                            <i class="fas fa-brain mr-2"></i> Skills
+                        </a>
+                    </li>
+                    <!-- Projects Link -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#projects">
+                            <i class="fas fa-project-diagram mr-2"></i> Projects
+                        </a>
+                    </li>
+                    <!-- Contact Link -->
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#contact">
+                            <i class="fas fa-envelope mr-2"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+   
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <!-- Slides -->
+            <div class="carousel-item active">
+                <img src="images/ux.jpg" class="d-block w-100" alt="Los Angeles">
+                <div class="carousel-caption">
+                    <h3 style="color:white ; font-size: 30px;">Ux Designer</h3>
+                </div>
+            </div>
+    
+            <div class="carousel-item">
+                <img src="images/1_CzqtAXY5i53TaJzz-EqAgw.jpg" class="d-block w-100" alt="Chicago">
+                <div class="carousel-caption">
+                    <h3 style="color:white ; font-size: 30px;">Programmer</h3>
+                </div>
+            </div>
+    
+            <div class="carousel-item">
+                <img src="images/web.jpg" class="d-block w-100" alt="New York">
+                <div class="carousel-caption">
+                    <h3 style="color:white ; font-size: 30px;">Web Designer</h3>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
+        
+        <!--About me-->
+        <section class="info-bzu-bar" id="about">
+            
+            <div class="container py-3 my-4 px-3" style="max-width: 1140px; background-color: lightgray; padding: 20px; border-radius: 10px;" >
+                <div> <h1 style="text-align: center;background-color: #10a37f;color: white;">About</h1></div>
+                <div class="row justify-content-center">
+                    <!-- About Me Button -->
+                    <div class="col-md-3 col-sm-6 mb-3" >
+                        <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseAbout" aria-expanded="true" aria-controls="collapseAbout" style="background-color:#10a37f ; color: white; border: 2px solid white;">
+                            About Me
+                        </button>
+                    </div>
+                    <!-- Skills Button -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseSkills" aria-expanded="false" aria-controls="collapseSkills" style="background-color: #10a37f; color: white; border: 2px solid white;">
+                            Education
+                        </button>
+                    </div>
+                    <!-- Projects Button -->
+                    <div class="col-md-3 col-sm-6 mb-3">
+                        <button class="btn btn-block" type="button" data-toggle="collapse" data-target="#collapseProjects" aria-expanded="false" aria-controls="collapseProjects" style="background-color: #10a37f; color: white; border: 2px solid white;">
+                        Intersets
+                        </button>
+                    </div>
+                </div>
+                <!-- Collapsible Sections -->
+                <div class="accordion mt-4" id="accordionExample">
+                    <!-- About Me Section -->
+                    <div id="collapseAbout" class="collapse show" aria-labelledby="headingAbout" data-parent="#accordionExample">
+                        <div class="card card-body text-justify">
+                            My name is Maria Rashid, and I am a passionate Computer Science student. I am deeply interested in technology and solving real-world problems through programming. I am always eager to learn new skills and explore emerging technologies. With a focus on web development and Artificial Intelligence, I strive to create innovative solutions that make a difference.
+                        </div>
+                    </div>
+                    <!-- Skills Section -->
+                    <div id="collapseSkills" class="collapse" aria-labelledby="headingSkills" data-parent="#accordionExample">
+                        <div class="card card-body text-justify">
+                            I am pursuing a Bachelor's degree in Computer Science, specializing in Programming and Web Engineering. My studies cover a range of topics, including software development, algorithms, and web technologies. Prior to this, I completed my pre-engineering (FSc) education, focusing on mathematics and physics. This background has provided a solid foundation for my work in technology and problem-solving.
+                        </div>
+                    </div>
+                    <!-- Projects Section -->
+                    <div id="collapseProjects" class="collapse" aria-labelledby="headingProjects" data-parent="#accordionExample">
+                        <div class="card card-body text-justify">
+                            I am deeply interested in Object-Oriented Programming (OOP), which allows for building efficient and scalable software solutions. Web design is another passion of mine, as I enjoy creating user-friendly and visually appealing websites. I am also fascinated by UX (User Experience) design, focusing on enhancing the overall user journey. Additionally, I have a keen interest in Artificial Intelligence, exploring how intelligent systems can solve complex problems and improve decision-making.
+                    </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+<!--skill-->
+<div class="container skills-section py-3 my-4 px-3" style="background-color: lightgray;" id="skill">
+    <div> <h1 style="text-align: center;background-color:#10a37f;color: white;">Skills</h1></div>
+    <div class="row">
+      <!-- Left column for Design Skills -->
+      <div class="col-md-6 skills-column">
+        <h3 class="skill-title">Design Skills</h3>
+        <div class="mb-3">
+          <label for="photoshop-skill" class="form-label">Photoshop</label>
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="bootstrap-skill" class="form-label">Bootstrap</label>
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="responsive-design-skill" class="form-label">Responsive Design</label>
+          <div class="progress">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="figma-skill" class="form-label">Figma</label>
+          <div class="progress">
+            <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right column for Programming Skills -->
+      <div class="col-md-6 skills-column">
+        <h3 class="skill-title">Programming Skills</h3>
+        <div class="mb-3">
+          <label for="html-skill" class="form-label">HTML</label>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="css-skill" class="form-label">CSS</label>
+          <div class="progress">
+            <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="js-skill" class="form-label">JavaScript</label>
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="js-skill" class="form-label">PHP</label>
+            <div class="progress">
+              <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!--project-->
+  <section class="projects-section" >
+    <div class="container py-3 my-4" style=" background-color: lightgray; " id="projects">
+        <div class="projects-header ">
+            <div>
+                <h1 class="fw-bold fst-italic" style="text-align: center; background-color:  #10a37f; color: white;">Projects</h1>
+            </div>
+            <p class="fw-norma">Here are some of the computer science projects I have worked on. Each project demonstrates my problem-solving abilities and creativity.</p>
+        </div>
+
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="images/ai.jpg" class="project-card-link">
+                    <div class="card project-card h-100">
+                        <img src="images/ai.jpg" class="card-img-top" alt="Project 1 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">AI Chatbot</h5>
+                            <p class="card-text text-justify">An intelligent chatbot designed to assist users with various tasks using natural language processing and machine learning techniques.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="images/cloud.jpg" class="project-card-link">
+                    <div class="card project-card h-100">
+                        <img src="images/cloud.jpg" class="card-img-top" alt="Project 2 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Blockchain Voting System</h5>
+                            <p class="card-text text-justify">A secure and transparent voting system based on blockchain technology, aimed at preventing fraud and ensuring voter privacy.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <a href="images/cyber.jpg" class="project-card-link ">
+                    <div class="card project-card h-100">
+                        <img src="images/cyber.jpg" class="card-img-top" alt="Project 3 Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Home Automation</h5>
+                            <p class="card-text text-justify fw-norma">A home automation system that allows users to control their home appliances remotely using IoT and mobile app integration.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact-form-section py-3 my-4 px-3" id="contact" >
+    <div class="container" style="background-color: lightgray; border-radius: 30px; max-width: 600px;">
+        <!-- Contact Header -->
+        <div class="contact-header text-center mb-4">
+            <div> <h1 style="text-align: center;background-color: #10a37f;color: white;">Contact Me</h1></div>
+            <p class="fw-norma" style="color: #041e42;">Feel free to reach out for any inquiries or collaborations.</p>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <form action="your-backend-script.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control " id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn " style="background-color: #041e42; color: white;">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Footer -->
+<div class="footer">
+    <p>Follow me on:</p>
+    <div class="footer-icons">
+        <!-- LinkedIn -->
+        <div class="icon-group">
+            <i class="fab fa-linkedin fa-2x"></i>
+            <div class="right-line"></div>
+            <a href="https://www.linkedin.com/in/williamhgates" target="_blank">Bill Gates</a>
+        </div>
+        <!-- YouTube -->
+        <div class="icon-group">
+            <i class="fab fa-youtube fa-2x"></i>
+            <div class="right-line"></div>
+            <a href="https://www.youtube.com" target="_blank">billgateyoutube</a>
+        </div>
+        <!-- Twitter -->
+        <div class="icon-group">
+            <i class="fab fa-twitter fa-2x"></i>
+            <div class="right-line"></div>
+            <a href="https://www.twitter.com/billgates" target="_blank">billgateTwitte</a>
+        </div>
+        <!-- Instagram -->
+        <div class="icon-group">
+            <i class="fab fa-instagram fa-2x"></i>
+            <div class="right-line"></div>
+            <a href="https://www.instagram.com/thisisbillgates/" target="_blank">thisisbillgates</a>
+        </div>
+    </div>
+    <p>All rights reserved.</p>
+    <hr class="border-white" width="50%">
+    <div style="margin-bottom: 20px;">
+        <h5>Contact Information:</h5>
+        <p style="margin: 5px 0;">  Email: <a href="mailto:billgates@example.com" style="color: white; text-decoration: none;">billgates@example.com</a></p>
+        <p style="margin: 5px 0;"><i class="fas fa-map-marker-alt"></i> Location: Seattle, Washington, USA</p>
+        <p>📞 Contact my team: <a href="tel:+123456789" style="color: white; text-decoration: none;">+1 (234) 567-890</a></p>
+    </div>
+    <p>All rights reserved.</p>
+    <hr class="border-white" width="50%">
+    <p>&copy; 2024 Bill Gates:</p>
+</div>
+<!--Skill-->
+
+        
+      <!-- Bootstrap JS -->
+      <script src="boot/JS/jquery.js"></script>
+      <script src="boot/JS/popper.js"></script>
+      <script src="boot/JS/bootstrapjs.js"></script>
+      <script src="boot/JS/mdbjs.js"></script>
+</body>
+</html>
